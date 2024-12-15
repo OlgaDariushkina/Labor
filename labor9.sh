@@ -1,5 +1,5 @@
 # 1. Архивирование файлов и скачивание с сервера с последующим разархивированием
-cat labor8skript1.sh
+cat labor9skript1.sh
 #!/bin/bash
 read -p "Введите удалённый сервер (user@hostname): " REMOTE_HOST
 read -p "Введите путь к удаленной папке : " REMOTE_DIR
@@ -15,7 +15,7 @@ tar -xzf "$LOCAL_SAVE_DIR/$ARCHIVE_NAME" -C "$LOCAL_SAVE_DIR"
 ssh "$REMOTE_HOST" "rm -f /tmp/$ARCHIVE_NAME"
 
 # 2. Мониторинг свободного места на сервере
-cat labor8skript2.sh
+cat labor9skript2.sh
 #!/bin/bash
 read -p "Введите удалённый сервер (user@hostname): " REMOTE_HOST
 read -p "Введите порог использования диска (в процентах): " THRESHOLD
@@ -32,7 +32,7 @@ else
 fi
 
 # 3. Синхронизация файлов между локальной машиной и удалённым сервером
-cat labor8skript3.sh
+cat labor9skript3.sh
 #!/bin/bash
 read -p "Введите локальную директорию: " LOCAL_DIR
 read -p "Введите удалённый сервер (user@hostname): " REMOTE_HOST
